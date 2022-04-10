@@ -1,0 +1,75 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Id
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Type
+                            </th>
+                            <th>
+                                Level
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for( let i = 0; i < items.length; i++ ) { %>
+                            <tr>
+                                <td>
+                                    <%= items[i].id %> 
+                                </td>
+                                <td>
+                                    <%= items[i].name %> 
+                                </td>
+                                <td>
+                                    <%= items[i].type %> 
+                                </td>
+                                <td>
+                                    <%= items[i].level %> 
+                                </td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <form role="form" action="/pokedex" method="get">
+                    <button type="submit" class="btn btn-info">
+                        View Page
+                    </button>
+                </form>
+                <form role="form" action="/pokedex/insert" method="get">
+                    <button type="submit" class="btn btn-secondary">
+                        Insert Page
+                    </button>
+                </form>
+                <form role="form" action="/pokedex/update" method="get">
+                    <button type="submit" class="btn btn-warning">
+                        Update Page
+                    </button>
+                </form>
+                <form role="form" action="/pokedex/delete" method="get">
+                    <button type="submit" class="btn btn-success">
+                        Delete Page
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
